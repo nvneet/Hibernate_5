@@ -1,0 +1,31 @@
+/HibernateSessionFactoryWithoutConfigFile
+*/target
+*/.settings
+.project
+.metadata
+tmp/
+.classpath
+*.class
+*/pom.xml.bak
+/log
+
+*.jar
+*.war
+*.ear
+*.db
+
+######################
+# Directories
+######################
+/bin/
+/deploy/
+
+######################
+# Logs
+######################
+*.log
+
+######################
+# Others
+
+
