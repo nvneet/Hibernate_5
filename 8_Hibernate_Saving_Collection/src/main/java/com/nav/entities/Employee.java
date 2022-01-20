@@ -1,8 +1,8 @@
 package com.nav.entities;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.HashSet;
 
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
@@ -14,7 +14,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 import com.nav.model.Address;
 
@@ -42,7 +45,10 @@ public class Employee {
 	
 	@ElementCollection
 	@JoinTable(name="address_table", joinColumns=@JoinColumn(name="employee_id"))
-	private Collection<Address> addressList = new HashSet<>();	
+//	@GenericGenerator(name="sequence-gen", strategy="sequence")
+//	@CollectionId(columns = { @Column(name="address_id") }, generator = "sequence-gen", type = @Type(type ="int"))
+//	private Collection<Address> addressList = new HashSet<>();	
+	private Collection<Address> addressList = new ArrayList<>();
 	
 	public Integer getEmployeeId() {
 		return employeeId;
