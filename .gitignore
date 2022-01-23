@@ -1,10 +1,8 @@
 /HibernateSessionFactoryWithoutConfigFile
 */target
 */.settings
-.project
 .metadata
 tmp/
-.classpath
 *.class
 */pom.xml.bak
 /log
