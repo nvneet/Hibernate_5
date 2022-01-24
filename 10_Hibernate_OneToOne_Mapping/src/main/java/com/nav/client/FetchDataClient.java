@@ -14,11 +14,11 @@ public class FetchDataClient {
 			
 			employee = session.get(Employee.class, 1);
 			
-			System.out.println("employee:  "+ employee); // address not available in employee object here
-			
-			if (employee != null) {
-				Address address = employee.getAddress();
-			}				
+			System.out.println("employee:  "+ employee);
+
+			// equivalent query :
+//  select * from  employee employee1 left outer join address address1 
+//  on employee1.address_id=address1.address_id where employee1.employeeId=1
 			
 		} catch (Exception e) {
 			e.printStackTrace();
